@@ -25,7 +25,6 @@ export async function GET() {
       model: openai("gpt-4o-mini"),
       prompt: `Give me one short, fun, and surprising fact about the movie "${user.movie}".
                Keep it to 1-2 sentences. Be specific and interesting.`,
-      maxTokens: 150,
     });
 
     const fact = await prisma.fact.create({
